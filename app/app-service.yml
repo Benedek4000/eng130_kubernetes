@@ -7,11 +7,10 @@ metadata:
 
 spec:
   ports:
-  - nodePort: 30001
-    port: 80
-    targetPort: 80
+  - port: 3000
+    targetPort: 3000
 
   selector:
     app: app
 
-  type: NodePort
+  type: LoadBalancer

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: app
-        #image: benedek4000/eng130-benedek-node-app:latest
         image: agelemerov/eng130-angel-docker:latest
+        imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 3000
