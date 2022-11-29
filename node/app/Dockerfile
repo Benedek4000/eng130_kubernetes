@@ -22,8 +22,6 @@ COPY --from =app /usr/src/app /usr/src app
 
 #COPY . .
 
-ENTRYPOINT [ "entrypoint.sh" ]
-
 EXPOSE 3000
 
 CMD ["node", "app.js"] 
