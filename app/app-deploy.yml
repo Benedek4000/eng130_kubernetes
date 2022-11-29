@@ -1,0 +1,21 @@
+apiVersion: apps/v1 # which api to use for deployment
+kind: Deployment # what kind of servece/object you want to create
+
+metadata:
+  name: app-deployment # naming the deployment
+spec:
+  selector:
+    matchLabels:
+      app: app # look for this label to match k8 service
+  replicas: 3 # create a replica set of this with instances pods
+  template:
+    metadata:
+      labels:
+        app: app # label connects to the service
+    spec:
+      containers:
+      - name: app
+        #image: benedek4000/eng130-benedek-node-app:latest
+        image: agelemerov/eng130-angel-docker:latest
+        ports:
+        - containerPort: 80
