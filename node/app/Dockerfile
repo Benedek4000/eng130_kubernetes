@@ -18,9 +18,9 @@ WORKDIR /usr/src/app
 
 RUN npm install -g npm@7.20.6
 
-COPY --from =app /usr/src/app /usr/src app
+#COPY --from =app /usr/src/app /usr/src app
 
-#COPY . .
+COPY . .
 
 EXPOSE 3000
 
